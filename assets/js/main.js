@@ -69,7 +69,7 @@ var config = {
     var difference = moment().diff(moment.unix(firstTrainTime), "minutes");
     var timeLeft = moment().diff(moment.unix(firstTrainTime), 'minutes') % frequency;
     var mins = moment(frequency - timeLeft, "mm").format('mm');
-    var nextTrain = moment().add(mins, "m").format("hh:mm a");
+    var nextTrain = moment().add(timeLeft, "m").format("hh:mm a");
 
 
     // Employee Info

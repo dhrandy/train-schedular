@@ -43,7 +43,7 @@
 h1 {
     font-size: 50px;
     font-weight: 600;
-    padding: 15px;
+    padding: 30px;
 }
 
 body {
@@ -60,3 +60,7 @@ body {
     background-color: #7a222e;
     border: unset;
 }
+
+/* .container-fluid {
+    background-color: black;
+} */
