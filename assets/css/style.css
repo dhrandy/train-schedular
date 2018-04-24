@@ -1,0 +1,58 @@
+.jumbotron {
+    background-image: url("../imgs/bg.jpg");
+    background-position: center right;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 350px;
+}
+
+.panel {
+    border: unset;
+    border-radius: 0;
+}
+
+.panel-heading {
+    border-radius: 0;
+}
+
+.panel-body {
+    background-color: lightgrey;
+    overflow: scroll;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: 1px solid slategray;
+}
+
+.table>thead>tr>th {
+    border-bottom: 2px solid slategray;
+}
+
+.form-control {
+    background-color: rgb(185, 185, 185);
+}
+
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+#title {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+body {
+    background-color: black;
+}
+
+.panel-default .panel-heading {
+    background-color: #7a222e;
+    border-color: #7a222e;
+    color:#c59f57;
+}
