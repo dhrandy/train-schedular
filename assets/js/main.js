@@ -62,25 +62,28 @@ var config = {
     // Store everything into a variable.
     var trainName = childSnapshot.val().name;
     var trainDest = childSnapshot.val().dest;
-    var firstTrainTime = moment(childSnapshot.val().firstTrainTime, 'HH:mm').format('X');
+    var firstTrainTime = moment(childSnapshot.val().firstTrainTime, 'hh:mm a');
     var frequency = childSnapshot.val().frequency;
     var nextArrival = childSnapshot.val().nextTrain;
 
     var difference = moment().diff(moment.unix(firstTrainTime), "minutes");
     var timeLeft = moment().diff(moment.unix(firstTrainTime), 'minutes') % frequency;
     var mins = moment(frequency - timeLeft, "mm").format('mm');
-    var nextTrain = moment().add(mins, "m").format("hh:mm A");
+    var nextTrain = moment().add(mins, "m").format("hh:mm a");
 
 
     // Employee Info
-    console.log(trainName);
-    console.log(trainDest);
-    console.log(firstTrainTime);
-    console.log(frequency);
-    console.log(nextArrival);
+    console.log("train name: " + trainName);
+    console.log("train dest: " + trainDest);
+    console.log("first train time: " + firstTrainTime);
+    console.log("frequency: " + frequency);
+    console.log("next arrival: " + nextArrival);
+    console.log("time left: " + timeLeft);
+    console.log("difference: " + difference);
+    console.log("next train: " + nextTrain)
   
     // Add each train's data into the table
     $("#employee-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDest + "</td><td>" +
-    firstTrainTime + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td></tr>");
+    frequency + "</td><td>" + nextTrain + "</td><td>" + mins + "</td></tr>");
 
   });

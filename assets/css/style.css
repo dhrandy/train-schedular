@@ -17,7 +17,7 @@
 
 .panel-body {
     background-color: lightgrey;
-    overflow: scroll;
+    overflow: auto;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
     border-top: 1px solid slategray;
@@ -54,4 +54,9 @@ body {
     background-color: #7a222e;
     border-color: #7a222e;
     color:#c59f57;
+}
+
+.btn-primary {
+    background-color: #7a222e;
+    border: unset;
 }
