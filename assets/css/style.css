@@ -75,6 +75,12 @@ body {
     background-color: #c59f57;
 }
 
+.footer {
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+}
+
 /* .container-fluid {
     background-color: black;
 } */
