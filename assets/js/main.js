@@ -66,24 +66,32 @@ var config = {
     var frequency = childSnapshot.val().frequency;
     var nextArrival = childSnapshot.val().nextTrain;
 
-    var difference = moment().diff(moment.unix(firstTrainTime), "minutes");
-    var timeLeft = moment().diff(moment.unix(firstTrainTime), 'minutes') % frequency;
-    var mins = moment(frequency - timeLeft, "mm").format('mm');
-    var nextTrain = moment().add(timeLeft, "m").format("hh:mm a");
+    var firstTimeConverted = moment(firstTrainTime, "hh:mm a").subtract(1, "years");
+    var currentTime = moment();
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    var tRemainder = diffTime % frequency;
+    var minsNextTrain = frequency - tRemainder;
+    var nextTrain = moment().add(minsNextTrain, "minutes");
+    var nextTrainConverted = moment(nextTrain).format("hh:mm a");
+
+    // var difference = moment().diff(moment.unix(firstTrainTime), "minutes");
+    // var timeLeft = moment().diff(moment.unix(firstTrainTime), 'minutes') % frequency;
+    // var mins = moment(frequency - timeLeft, "mm").format('mm');
+    // var nextTrain = moment().add(timeLeft, "m").format("hh:mm a");
 
 
-    // Employee Info
-    console.log("train name: " + trainName);
-    console.log("train dest: " + trainDest);
-    console.log("first train time: " + firstTrainTime);
-    console.log("frequency: " + frequency);
-    console.log("next arrival: " + nextArrival);
-    console.log("time left: " + timeLeft);
-    console.log("difference: " + difference);
-    console.log("next train: " + nextTrain)
+    // Train Info
+    // console.log("train name: " + trainName);
+    // console.log("train dest: " + trainDest);
+    // console.log("first train time: " + firstTrainTime);
+    // console.log("frequency: " + frequency);
+    // console.log("next arrival: " + nextArrival);
+    // console.log("time left: " + timeLeft);
+    // console.log("difference: " + difference);
+    // console.log("next train: " + nextTrain)
   
     // Add each train's data into the table
     $("#employee-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDest + "</td><td>" +
-    frequency + "</td><td>" + nextTrain + "</td><td>" + mins + "</td></tr>");
+    frequency + "</td><td>" + nextTrainConverted + "</td><td>" + minsNextTrain + "</td></tr>");
 
   });
