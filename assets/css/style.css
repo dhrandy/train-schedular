@@ -1,11 +1,6 @@
-/* .jumbotron {
-    background-image: url("../imgs/bg.jpg");
-    background-size: cover;
-    background-color: black;
-    color: white;
-    height: 350px;
-} */
-
+.jumbotron {
+    display: none;
+}
 .carousel-inner {
     padding-bottom: 20px;
 }
@@ -84,6 +79,26 @@ body {
     text-align: center;
     color: white;
     padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-inner   {
+        display: none;
+    }
+
+    .right, .carousel-control, .carousel-indicators, .left, .carousel-control {
+        display: none;
+    }
+
+    .jumbotron {
+    display: block;
+    background-image: url("../imgs/bgm.jpg");
+    background-size: cover;
+    background-color: black;
+    height: 228px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    }
 }
 
 /* .container-fluid {
