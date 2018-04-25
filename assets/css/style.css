@@ -50,10 +50,12 @@
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 65px;
     font-weight: bold;
     padding: 30px;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 22px;
 }
 
 body {
@@ -98,6 +100,12 @@ body {
     height: 228px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 12px;
     }
 }
 
