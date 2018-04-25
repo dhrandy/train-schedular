@@ -1,9 +1,13 @@
-.jumbotron {
+/* .jumbotron {
     background-image: url("../imgs/bg.jpg");
     background-size: cover;
     background-color: black;
     color: white;
     height: 350px;
+} */
+
+.carousel-inner {
+    padding-bottom: 20px;
 }
 
 .panel {
