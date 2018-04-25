@@ -55,6 +55,8 @@ var config = {
   });
   
   // 3. Create Firebase event for adding train times to the database and a row in the html when a user adds an entry
+
+  
   database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   
     console.log(childSnapshot.val());
@@ -65,6 +67,8 @@ var config = {
     var firstTrainTime = moment(childSnapshot.val().firstTrainTime, 'hh:mm a');
     var frequency = childSnapshot.val().frequency;
     var nextArrival = childSnapshot.val().nextTrain;
+
+    // var updateData = function() {
 
     var firstTimeConverted = moment(firstTrainTime, "hh:mm a").subtract(1, "years");
     var currentTime = moment();
@@ -82,8 +86,16 @@ var config = {
     console.log("time left: " + minsNextTrain);
     console.log("difference: " + diffTime);
     console.log("next train time: " + nextTrainConverted)
+
+    // }
   
     // Add each train's data into the table
     $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDest + "</td><td>" +
     frequency + "</td><td>" + nextTrainConverted + "</td><td>" + minsNextTrain + "</td></tr>");
+
+    // setInterval(function(){updateData()},10000);
   });
+
+
+
+
