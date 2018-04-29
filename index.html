@@ -33,7 +33,7 @@
                     </button>
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav ml-auto">
                       <li class="active"><a href="#">Home</a></li>
                       <li><a href="#">Stations</a></li>
                       <li><a href="#">Train Info</a></li>
@@ -48,8 +48,6 @@
           <div class = "train-logo"><img src="assets/imgs/train.jpg"></div>
             <h1 class="text-center">Train Schedular</h1>
             <div class = "yellow-strip bottom-strip"></div>
-
-            <!-- <h3 class="text-center">Keep chugging!</h3> -->
         </div>
         <div class = "youtube col-md-6">
             <div class="video-container">
@@ -58,29 +56,30 @@
         </div>
         <div class = "row">
             <div class = "col-md-12">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
         
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="assets/imgs/bg.jpg" alt="Los Angeles">
-            </div>
+                    <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="assets/imgs/bg.jpg" alt="Los Angeles">
+                </div>
         
-            <div class="item">
-              <img src="assets/imgs/bg1-1.jpg" alt="Chicago">
-            </div>
+                <div class="item">
+                  <img src="assets/imgs/bg1-1.jpg" alt="Chicago">
+                </div>
         
-            <div class="item">
-              <img src="assets/imgs/bg3-2.jpg" alt="New York">
-            </div>
+                <div class="item">
+                  <img src="assets/imgs/bg3-2.jpg" alt="New York">
+                </div>
+              </div>
           </div>
-          </div>div>
+        </div>
         
           <!-- Left and right controls
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -145,11 +144,11 @@
                     <input class="form-control" id="role-input" type="text">
                   </div>
                   <div class="form-group">
-                    <label for="start-input">First Train Time (hh:mm am/pm - Standard Time)</label>
+                    <label for="start-input">First Train Time (HH:mm - Military Time)</label>
                     <input class="form-control" id="start-input" type="text">
                   </div>
                   <div class="form-group">
-                    <label for="rate-input">Frequency (min)</label>
+                    <label for="rate-input">Frequency (mins)</label>
                     <input class="form-control" id="rate-input" type="text">
                   </div>
                   <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
